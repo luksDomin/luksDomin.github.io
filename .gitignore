@@ -197,3 +197,8 @@ pip-selfcheck.json
 # End of https://www.toptal.com/developers/gitignore/api/python,virtualenv,jekyll
 
 /_posts/active-*.md
+
+
+/parsing/*
+!/parsing/*.py
+!/parsing/README.md
