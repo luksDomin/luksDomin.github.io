@@ -1,5 +1,14 @@
+---
+layout: post
+title: "Environment"
+date: 2026-01-23 00:00:00 +0100
+tags: ["File Upload", "CVE", "Sudoers", "GNUPG"]
+os: "Linux"
+level: "Medium"
+image: "https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/757eeb9b0f530e71875f0219d0d477e4.png"
+---
 
-Enumeración de servicios.
+Enumeración de servicios.
 
 ```java
 nmap -sC -sV -p22,80 -Pn 10.10.11.67              
