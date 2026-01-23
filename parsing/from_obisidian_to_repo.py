@@ -1,3 +1,4 @@
+import urllib.parse
 import os
 import re
 import uuid
@@ -8,23 +9,36 @@ ROOT_SEARCH_DIR = os.getcwd()
 OUTPUT_DIR = "output_copy"
 SUPPORTED_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp")
 
-def find_directory_recursive(root, target_name):
+def find_directories_recursive(root, target_name):
+    matches = []
     for dirpath, dirnames, _ in os.walk(root):
         if target_name in dirnames:
-            return os.path.join(dirpath, target_name)
-    return None
+            matches.append(os.path.join(dirpath, target_name))
+    return matches
 
 def ensure_dir(path):
     os.makedirs(path, exist_ok=True)
 
 def extract_image_references(md_content):
     """
-    Extrae referencias Obsidian:
-    ![[image.png]]
-    ![[image.png|500]]
+    Soporta:
+    - ![[image.png]]
+    - ![[image.png|500]]
+    - ![[attachments/image.png|500]]
+    - ![](image.png)
+    - ![](attachments/image.png)
     """
-    pattern = r'!\[\[([^|\]]+\.(?:png|jpg|jpeg|webp))(?:\|\d+)?\]\]'
-    return set(re.findall(pattern, md_content, flags=re.IGNORECASE))
+    obsidian = r'!\[\[(?:attachments/)?([^|\]]+\.(?:png|jpg|jpeg|webp))(?:\|\d+)?\]\]'
+    markdown = r'!\[\]\((?:attachments/)?(.+?\.(?:png|jpg|jpeg|webp))\)'
+
+    refs = set()
+    refs.update(re.findall(obsidian, md_content, flags=re.IGNORECASE))
+    refs.update(re.findall(markdown, md_content, flags=re.IGNORECASE))
+
+    # Decodificar %20 y otros caracteres URL
+    decoded_refs = {urllib.parse.unquote(r) for r in refs}
+    return decoded_refs
+
 
 def convert_images(attachments_dir, used_images, output_images_dir):
     ensure_dir(output_images_dir)
@@ -52,19 +66,46 @@ def convert_images(attachments_dir, used_images, output_images_dir):
 
 def process_markdown(md_content, image_map, machine):
     for original, new_name in image_map.items():
-        pattern = rf'!\[\[{re.escape(original)}(?:\|\d+)?\]\]'
+        # soportar espacios y %20
+        encoded = urllib.parse.quote(original)
+
+        obsidian = rf'!\[\[(?:attachments/)?(?:{re.escape(original)}|{re.escape(encoded)})(?:\|\d+)?\]\]'
+        markdown = rf'!\[\]\((?:attachments/)?(?:{re.escape(original)}|{re.escape(encoded)})\)'
+
         replacement = f"![](/assets/machines/{machine.lower()}.htb/images/{new_name})"
-        md_content = re.sub(pattern, replacement, md_content)
+
+        md_content = re.sub(obsidian, replacement, md_content)
+        md_content = re.sub(markdown, replacement, md_content)
 
     return md_content
+
+
+def choose_directory(directories):
+    if len(directories) == 1:
+        return directories[0]
+
+    print("\nSe encontraron varias coincidencias:")
+    for i, d in enumerate(directories, 1):
+        print(f"[{i}] {d}")
+
+    while True:
+        try:
+            choice = int(input("Selecciona una opción: "))
+            if 1 <= choice <= len(directories):
+                return directories[choice - 1]
+        except ValueError:
+            pass
+        print("Opción inválida, intenta de nuevo.")
 
 def main():
     machine = input("¿Qué máquina de Hack The Box quieres documentar?: ").strip()
 
-    source_dir = find_directory_recursive(ROOT_SEARCH_DIR, machine)
-    if not source_dir:
-        print(f"[✘] No se encontró el directorio '{machine}'")
+    matches = find_directories_recursive(ROOT_SEARCH_DIR, machine)
+    if not matches:
+        print(f"[✘] No se encontró ningún directorio '{machine}'")
         return
+
+    source_dir = choose_directory(matches)
 
     md_src = os.path.join(source_dir, f"{machine}.md")
     attachments_dir = os.path.join(source_dir, "attachments")
