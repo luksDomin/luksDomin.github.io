@@ -1,18 +1,16 @@
-name: Aldayr Ruiz
+name: Lucas Domínguez
 dp: /assets/icons/profile.png
 description: "
-  <p>
-  Welcome to my Hack The Box walkthroughs space. Here, I share strategies and solutions used on challenging machines. This site is a practical resource for exploring the realm of ethical hacking.
-  </p>
+  <p>En esta página iré recopilando los write-ups de las máquinas de Hack The Box que voy resolviendo. Documentando el proceso, las vulnerabilidades encontradas y cómo las exploto, junto con lo que voy aprendiendo en cada reto.</p>
 "
-email: aldayrruiz@proton.me
+email: lucasdct10@gmail.com
 contact:
   - title: linkedin
-    url: https://www.linkedin.com/in/aldayrruiz
+    url: www.linkedin.com/in/lucas-domínguez-032977266
   - title: github
-    url: https://github.com/aldayrruiz
+    url: https://github.com/luksDomin/
   - title: email
-    url: mailto:aldayrruiz@proton.me
+    url: mailto:lucasdct10@gmail.com
   - title: hackthebox
-    url: https://app.hackthebox.com/profile/1155152
+    url: https://app.hackthebox.com/public/users/1771423
 
