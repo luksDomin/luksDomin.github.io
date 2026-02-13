@@ -202,3 +202,8 @@ pip-selfcheck.json
 /parsing/*
 !/parsing/*.py
 !/parsing/README.md
+
+#obsidian
+obsidian
+.obisidian/
+obsidian/
