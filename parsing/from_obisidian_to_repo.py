@@ -98,7 +98,7 @@ def choose_directory(directories):
         print("Opción inválida, intenta de nuevo.")
 
 def main():
-    machine = input("¿Qué máquina de Hack The Box quieres documentar?: ").strip()
+    machine = input("¿Qué máquina de Hack The Box quieres documentar?: ").strip().lower()
 
     matches = find_directories_recursive(ROOT_SEARCH_DIR, machine)
     if not matches:
