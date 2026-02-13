@@ -3,8 +3,8 @@ markdown: kramdown
 
 # for atom feed
 author:
-  name: Aldayr Ruiz
-  email: aldayrruiz@proton.me
+  name: Lucas Domínguez Carballo
+  email: lucasdct10@gmail.com
 
 plugins:
   - jemoji
