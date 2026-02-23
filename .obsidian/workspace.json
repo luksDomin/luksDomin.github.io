@@ -1,0 +1,209 @@
+{
+  "main": {
+    "id": "cc47ae866cecf1bb",
+    "type": "split",
+    "children": [
+      {
+        "id": "ecd13ddc9cc93b04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ccbd6966a3d6c2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2026-02-23-twomillion.htb.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-02-23-twomillion.htb"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7365d47f79d6bb40",
+    "type": "split",
+    "children": [
+      {
+        "id": "c30088b6319f50b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de2fc320510c5e45",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "3895d1b30af53ced",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:CBE",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "e263c6c700b4425f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "3799458b9e111395",
+    "type": "split",
+    "children": [
+      {
+        "id": "629191583c085b76",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "324b5dbd3b8089a6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2026-02-23-twomillion.htb.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de 2026-02-23-twomillion.htb"
+            }
+          },
+          {
+            "id": "58d1c8366adc5fc3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TwoMillion/TwoMillion.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de TwoMillion"
+            }
+          },
+          {
+            "id": "70ab63fdded1dbff",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "f4db4630dde74e07",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "92fcbffec364de0a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TwoMillion/TwoMillion.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema de TwoMillion"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "9ccbd6966a3d6c2d",
+  "lastOpenFiles": [
+    "_posts/2026-02-13-cap.htb.md",
+    "_posts/2026-02-23-twomillion.htb.md",
+    "assets/machines/twomillion.htb/images/ed17cd59-ad33-415b-b542-d0491c2f81c6.webp",
+    "assets/machines/twomillion.htb/images/e2c3c7b5-05ca-4cca-ae85-5038b53bce9b.webp",
+    "assets/machines/twomillion.htb/images/b3c0e32c-fbd4-4bed-b738-47d54c90a5f5.webp",
+    "assets/machines/twomillion.htb/images/ac8c77a7-ed24-4520-b8fd-a4c4f6ae5e77.webp",
+    "assets/machines/twomillion.htb/images/8a27bb27-7865-4e7e-9403-5ede657fe43e.webp",
+    "assets/machines/twomillion.htb/images/7b69840d-d335-4c50-bbff-0c2c8c15c567.webp",
+    "assets/machines/twomillion.htb/images/730f8258-e218-4e30-9c36-524873f21271.webp",
+    "assets/machines/twomillion.htb/images/6c0f3b40-63b0-4074-95c5-871f96d889e3.webp",
+    "assets/machines/twomillion.htb/images/2f7a7c68-84e9-4c24-ad48-7882f21805e7.webp",
+    "assets/machines/twomillion.htb/images/1f663b5c-26c0-4781-a25e-5d8f3b32dfe1.webp",
+    "assets/machines/twomillion.htb/images",
+    "assets/machines/twomillion.htb",
+    "parsing/README.md",
+    "README.md",
+    "TwoMillion/TwoMillion.md",
+    "TwoMillion/attachments",
+    "TwoMillion"
+  ]
+}
